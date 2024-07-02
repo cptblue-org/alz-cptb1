@@ -34,10 +34,10 @@ module "hubnetworking" {
       location            = var.default_location
       resource_group_name = "rg-connectivity-${var.default_location}"
       firewall = {
-        subnet_address_prefix = var.firewall_subnet_address_prefix
-        sku_tier              = "Standard"
-        sku_name              = "AZFW_VNet"
-        zones                 = ["1", "2", "3"]
+        subnet_address_prefix            = var.firewall_subnet_address_prefix
+        management_subnet_address_prefix = var.firewall_management_subnet_address_prefix
+        sku_tier                         = "Basic"
+        sku_name                         = "AZFW_VNet"
         default_ip_configuration = {
           public_ip_config = {
             zones = ["1", "2", "3"]
