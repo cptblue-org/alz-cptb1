@@ -46,6 +46,11 @@ variable "firewall_subnet_address_prefix" {
   type        = string
 }
 
+variable "firewall_management_subnet_address_prefix" {
+  description = "The IP address range for the basic firewall management subnet in CIDR format|8|cidr_range"
+  type        = string
+}
+
 variable "gateway_subnet_address_prefix" {
   description = "The IP address range for the gateway subnet in CIDR format|10|cidr_range"
   type        = string
